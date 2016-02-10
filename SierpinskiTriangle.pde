@@ -1,4 +1,4 @@
-int change = 100;
+int change = 300;
 public void setup()
 {
 	background(0);
@@ -7,6 +7,11 @@ public void setup()
 public void draw()
 {
 	sierpinski(0,500,500);
+	if(change > 8)
+	change = change + ((int)(Math.random()*20) - 10);
+	System.out.println(change);
+	if(change <= 8)
+		change = change + 100;
 }
 public void mouseDragged() //optional
 {
@@ -20,7 +25,7 @@ public void sierpinski(int x, int y, int len)
 	if(len <= change)
 	{
 		// strokeWeight((int)(Math.random()*15));
-		stroke(255,255,255);
+		stroke(0,255,0);
 		fill(0);
 		triangle(x,y,x+len/2,y-len,x+len,y);
 	}
