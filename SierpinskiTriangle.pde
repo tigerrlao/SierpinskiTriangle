@@ -9,7 +9,6 @@ public void draw()
 	sierpinski(0,500,500);
 	if(change > 8)
 	change = change + ((int)(Math.random()*20) - 10);
-	System.out.println(change);
 	if(change <= 8)
 		change = change + 100;
 }
